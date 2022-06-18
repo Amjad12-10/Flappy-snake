@@ -1,6 +1,6 @@
-do not think about the purpose
+Do not think about the purpose
 
-snake game - flappy bird
+# snake game - flappy bird
 
 # interesting 
 	snake moves automatic to right
