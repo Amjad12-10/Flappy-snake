@@ -10,6 +10,7 @@ namespace MJ
         [SerializeField] private List<GameObject> SnakeHeads;
         [SerializeField] private float offsetTime = 5;
 
+        [SerializeField] private UIManager Manager;
         // Use this for initialization
         void Start()
         {
@@ -24,17 +25,27 @@ namespace MJ
                     var current = SnakeHeads[i].transform;
 
                     current.position = Vector3.Lerp(current.position, previous.position, Time.deltaTime * offsetTime);
-                    current.transform.right = previous.transform.position - current.transform.position;
+                    current.right = previous.position - current.position;
                 }
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.CompareTag("Player"))
             {
+                Manager.UpdateScore();
                 SnakeHeads.Add(collision.gameObject);
                 collision.gameObject.tag = "Untagged";
-
                 collision.transform.DOPunchScale(-1f * Vector3.one, 0.25f, 10, 1);
+            }
+            if (collision.gameObject.CompareTag("Score"))
+            {
+                Manager.UpdateScore();
+            }
+            if (collision.gameObject.CompareTag("Finish"))
+            {
+                Manager.OnGameOver();
+                var SnakeHeadInstace = this.GetComponent<SnakeHead>();
+                SnakeHeadInstace.speed = 0;
             }
         }
     }

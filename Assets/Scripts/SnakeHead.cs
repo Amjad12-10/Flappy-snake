@@ -7,7 +7,7 @@ namespace MJ
 {
     public class SnakeHead : MonoBehaviour
     {
-        [SerializeField] private int speed = 10;
+        public int speed = 10;
 
         private float maxRotate = 45;
         private Vector3 to;
@@ -29,7 +29,7 @@ namespace MJ
 
             var Pos = speed * Time.deltaTime * transform.up;
             transform.position += Pos;
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -5, 5), transform.position.y);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -10, 5), transform.position.y);
 
         }
         private void limitRot()
