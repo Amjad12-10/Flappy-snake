@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
+using DG.Tweening;
 using UnityEngine;
 
 namespace MJ
@@ -33,6 +33,8 @@ namespace MJ
             {
                 SnakeHeads.Add(collision.gameObject);
                 collision.gameObject.tag = "Untagged";
+
+                collision.transform.DOPunchScale(-1f * Vector3.one, 0.25f, 10, 1);
             }
         }
     }
