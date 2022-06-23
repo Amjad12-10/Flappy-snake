@@ -7,9 +7,11 @@ namespace MJ
 {
     public class SnakeHead : MonoBehaviour
     {
+        // Head
         public int speed = 10;
-
-        private float maxRotate = 45;
+        public int rotSpeed = 180;
+        // Head Fixed
+        public float maxRotate = 45;
         private Vector3 to;
         // Update is called once per frame
         void Update()
@@ -22,16 +24,14 @@ namespace MJ
             {
                 to = Vector3.back;
             }
-
             transform.Rotate(to * 90 * Time.deltaTime);
-
             limitRot();
-
             var Pos = speed * Time.deltaTime * transform.up;
             transform.position += Pos;
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -10, 5), transform.position.y);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -5, 5), transform.position.y);
 
         }
+        //--------- Limiting the Rotation
         private void limitRot()
         {
             Vector3 Rot = this.transform.rotation.eulerAngles;

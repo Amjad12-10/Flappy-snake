@@ -41,12 +41,12 @@ namespace MJ
             {
                 Manager.UpdateScore();
             }
-            if (collision.gameObject.CompareTag("Finish"))
+          /*  if (collision.gameObject.CompareTag("Finish"))
             {
                 Manager.OnGameOver();
                 var SnakeHeadInstace = this.GetComponent<SnakeHead>();
                 SnakeHeadInstace.speed = 0;
-            }
+            }*/
         }
     }
 }
