@@ -1,4 +1,4 @@
-Do not think about the purpose
+
 
 # snake game - flappy bird
 
@@ -8,7 +8,6 @@ Do not think about the purpose
 # collectables
 	snake tail increase
 
-# Links 
-	https://play.google.com/store/apps/details?id=com.hypercasualgamesfree.snakemaster3d
-	https://play.google.com/store/apps/details?id=com.trymygames.snake.arena
+
+https://user-images.githubusercontent.com/75468288/175475283-98ac1172-2c00-43d1-8229-e867bb39c422.mp4
 
