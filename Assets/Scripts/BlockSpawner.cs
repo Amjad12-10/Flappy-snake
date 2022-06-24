@@ -5,7 +5,6 @@ using UnityEngine;
 public class BlockSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] Blocks;
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(spwanblock());

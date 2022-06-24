@@ -28,7 +28,7 @@ namespace MJ
             limitRot();
             var Pos = speed * Time.deltaTime * transform.up;
             transform.position += Pos;
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -5, 5), transform.position.y);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -10, 10), transform.position.y);
 
         }
         //--------- Limiting the Rotation

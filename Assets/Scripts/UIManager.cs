@@ -6,10 +6,10 @@ using DG.Tweening;
 using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
+    // UserInterface
     [SerializeField] private TextMeshProUGUI CurrentScore;
-    // After Game Ends
     [SerializeField] private GameObject HighScore,HighscoreText,Score,ScoreText;
-
+    // Panels
     [Header("GameOverPanel")]
     [SerializeField] private GameObject GameOverPanel,GamePanel;
 
